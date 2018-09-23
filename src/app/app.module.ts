@@ -10,6 +10,7 @@ import { ImagePaginationComponent } from './image-pagination/image-pagination.co
 import { HttpClientModule } from '@angular/common/http';
 import { StylishPaginationComponent } from './stylish-pagination/stylish-pagination.component';
 import { InfiniteScrollPaginationComponent } from './infinite-scroll-pagination/infinite-scroll-pagination.component';
+import { ButtonsStylishPaginationComponent } from './buttons-stylish-pagination/buttons-stylish-pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InfiniteScrollPaginationComponent } from './infinite-scroll-pagination/
     FooterComponent,
     ImagePaginationComponent,
     StylishPaginationComponent,
-    InfiniteScrollPaginationComponent
+    InfiniteScrollPaginationComponent,
+    ButtonsStylishPaginationComponent
   ],
   imports: [
     BrowserModule, NgxPaginationModule, HttpClientModule

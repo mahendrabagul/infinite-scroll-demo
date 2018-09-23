@@ -30,3 +30,9 @@
     <app-stylish-pagination [maxPages]="maxPages" [current]="currentPage" [itemsPerPage]="itemsPerPage" (changePage)="pageChanged($event)"></app-stylish-pagination>
   </div>
 </div>
+<div class="row top-buffer">
+  <div class="container" *ngIf="devices?.length>1">
+    <app-buttons-stylish-pagination [maxPages]="maxPages" [current]="currentPage" [itemsPerPage]="itemsPerPage"
+      (changePage)="pageChanged($event)"></app-buttons-stylish-pagination>
+  </div>
+</div>
