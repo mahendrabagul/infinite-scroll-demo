@@ -1,11 +1,13 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Page } from '../models/page';
+
+
 @Component({
-  selector: 'app-image-pagination',
-  templateUrl: './image-pagination.component.html',
-  styleUrls: ['./image-pagination.component.css']
+  selector: 'app-stylish-pagination',
+  templateUrl: './stylish-pagination.component.html',
+  styleUrls: ['./stylish-pagination.component.css']
 })
-export class ImagePaginationComponent implements OnInit {
+export class StylishPaginationComponent implements OnInit {
   @Input() maxPages: number;
   @Input() current: number;
   @Input() postsPerPage: number[];
@@ -29,11 +31,9 @@ export class ImagePaginationComponent implements OnInit {
   }
 
   setPage(page: number, perPage: number) {
-    if (page <= this.maxPages) {
-      this.pageModel.page = page;
-      this.pageModel.itemsPerPage = perPage;
-      this.changePage.emit(this.pageModel);
-    }
+    this.pageModel.page = page;
+    this.pageModel.itemsPerPage = perPage;
+    this.changePage.emit(this.pageModel);
   }
 
   createPages() {

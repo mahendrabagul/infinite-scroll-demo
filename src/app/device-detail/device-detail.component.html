@@ -3,7 +3,6 @@
     <table class="table table-dark table-hover table-striped">
       <thead>
         <tr>
-          <th>Id</th>
           <th>Device Id</th>
           <th>Timestamp</th>
           <th>Moisture</th>
@@ -11,7 +10,6 @@
       </thead>
       <tbody>
         <tr *ngFor="let device of devices | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
-          <td> {{device._id.$oid}} </td>
           <td> {{device.deviceId}} </td>
           <td> {{device.timestamp}} </td>
           <td> {{device.moisture}} </td>
@@ -19,11 +17,16 @@
       </tbody>
     </table>
   </div>
-  <!-- <pagination-controls (pageChange)="p = $event" [responsive]="responsive" [nextLabel]="labels1.nextLabel"
-    [directionLinks]="directionLinks" [previousLabel]="labels1.previousLabel" class="round-black-pagination"></pagination-controls>
-  <pagination-controls (pageChange)="p = $event" [responsive]="responsive" [nextLabel]="labels2.nextLabel"
-    [directionLinks]="" [previousLabel]="labels2.previousLabel" class="square-green-pagination"></pagination-controls> -->
+  <!-- <pagination-controls (pageChange)="p = $event" [responsive]="responsive" [nextLabel]="Next"
+    [directionLinks]="true" [previousLabel]="Prev" class="round-black-pagination"></pagination-controls> -->
 </div>
-<div class="container" *ngIf="devices?.length>1">
-  <app-image-pagination [maxPages]="maxPages" [current]="currentPage" [itemsPerPage]="itemsPerPage" (changePage)="pageChanged($event)"></app-image-pagination>
+<div class="row top-buffer">
+  <div class="container" *ngIf="devices?.length>1">
+    <app-image-pagination [maxPages]="maxPages" [current]="currentPage" [itemsPerPage]="itemsPerPage" (changePage)="pageChanged($event)"></app-image-pagination>
+  </div>
+</div>
+<div class="row top-buffer">
+  <div class="container" *ngIf="devices?.length>1">
+    <app-stylish-pagination [maxPages]="maxPages" [current]="currentPage" [itemsPerPage]="itemsPerPage" (changePage)="pageChanged($event)"></app-stylish-pagination>
+  </div>
 </div>

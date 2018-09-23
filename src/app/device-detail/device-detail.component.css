@@ -13,3 +13,5 @@ thead {
     background:rgb(97, 255, 97);
     display: inline-block;
 }
+
+.top-buffer { margin-top:20px; }

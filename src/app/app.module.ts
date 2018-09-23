@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImagePaginationComponent } from './image-pagination/image-pagination.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StylishPaginationComponent } from './stylish-pagination/stylish-pagination.component';
+import { InfiniteScrollPaginationComponent } from './infinite-scroll-pagination/infinite-scroll-pagination.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     DeviceDetailComponent,
     HeaderComponent,
     FooterComponent,
-    ImagePaginationComponent
+    ImagePaginationComponent,
+    StylishPaginationComponent,
+    InfiniteScrollPaginationComponent
   ],
   imports: [
     BrowserModule, NgxPaginationModule, HttpClientModule
